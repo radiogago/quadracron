@@ -30,4 +30,33 @@ Fluxo principal:
 4. Clica em "Entrar".
 5. Sistema valida as informações e direciona a tela principal.
 
-Fluxo Alternativo
+Fluxo Alternativo:
+- E-Mail ou nome de usuário incorreto: sistema exibe mensagem de erro.
+- Senha incorreta: sistema exibe mensagem de erro.
+
+
+Ator: Usuário (qualquer)
+Objetivo: Visualizar horários disponíveis da quadra
+Descrição: O usuário visualiza os horários disponíveis e não disponíveis.
+
+Fluxo principal:
+1. O usuário abre a aba de horários.
+2. O usuário visualiza os horários disponíveis e não disponíveis.
+
+
+Ator: Representante de esporte
+Objetivo: Preencher formulário de agendamento.
+Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O representante de esporte abre a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
