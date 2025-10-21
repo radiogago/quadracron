@@ -1,6 +1,6 @@
-<p>Ator: Usuário (qualquer)</p>
-<p>Objetivo: Fazer cadastro</p>
-<p>Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema.</p>
+Ator: Usuário (qualquer)
+Objetivo: Fazer cadastro
+Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema.
 
 Fluxo principal: 
 1. O usuário abre a tela para cadastro e escolhe uma opção (aluno, professsor, coordenador, gremista, membro do CABEC, representade de cada esporte ou administrador).
@@ -49,7 +49,6 @@ Fluxo Alternativo:
 - Visualizar horários: apenas usuários logados no sistema podem ver os horários.
 
 #
-
 
 Ator: Representante de esporte
 Objetivo: Preencher formulário de agendamento.
