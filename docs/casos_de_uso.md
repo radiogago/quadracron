@@ -1,6 +1,6 @@
-Ator: Usuário (qualquer)
-Objetivo: Fazer cadastro
-Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema.
+<p>Ator: Usuário (qualquer)</p>
+<p> Objetivo: Fazer cadastro
+<p>Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema.</p>
 
 Fluxo principal: 
 1. O usuário abre a tela para cadastro e escolhe uma opção (aluno, professsor, coordenador, gremista, membro do CABEC, representade de cada esporte ou administrador).
@@ -20,9 +20,9 @@ Fluxos Alternativos:
 
 #
 
-Ator: Usuário (qualquer)
-Objetivo: Realizar login no sistema
-Descrição: O usuário insere seu login e senha para acessar o sistema.
+<p>Ator: Usuário (qualquer)</p>
+<p>Objetivo: Realizar login no sistema</p>
+<p>Descrição: O usuário insere seu login e senha para acessar o sistema.</p>
 
 Fluxo principal:
 1. O usuário abre a aba de login e escolhe uma opção (aluno, professsor, coordenador, gremista, membro do CABEC, representade de cada esporte ou administrador).
@@ -37,9 +37,9 @@ Fluxo Alternativo:
 
 #
 
-Ator: Usuário (qualquer)
-Objetivo: Visualizar horários disponíveis da quadra
-Descrição: O usuário visualiza os horários disponíveis e não disponíveis.
+<p>Ator: Usuário (qualquer)</p>
+<p>Objetivo: Visualizar horários disponíveis da quadra</p>
+<p>Descrição: O usuário visualiza os horários disponíveis e não disponíveis.</p>
 
 Fluxo principal:
 1. O usuário abre a aba de horários.
@@ -50,9 +50,9 @@ Fluxo Alternativo:
 
 #
 
-Ator: Representante de esporte
-Objetivo: Preencher formulário de agendamento.
-Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
+<p>Ator: Representante de esporte</p>
+<p>Objetivo: Preencher formulário de agendamento.</p>
+</p>Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.</p>
 
 Fluxo principal:
 1. O representante de esporte abre a aba do formulário de agendamento.
@@ -69,9 +69,9 @@ Fluxo Alternativo:
 
 #
 
-Ator: Representante de esporte
-Objetivo: Preencher formulário de agendamento.
-Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
+<p>Ator: Representante de esporte</p>
+<p>Objetivo: Preencher formulário de agendamento.</p>
+<p>Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.</p>
 
 Fluxo principal:
 1. O representante de esporte abre a aba do formulário de agendamento.
@@ -88,9 +88,9 @@ Fluxo Alternativo:
 
 #
 
-Ator: Professor
-Objetivo: Preencher formulário de agendamento.
-Descrição: O professor preenche um formulário para agendar a quadra poliesportiva.
+<p>Ator: Professor</p>
+<p>Objetivo: Preencher formulário de agendamento.</p>
+<p>Descrição: O professor preenche um formulário para agendar a quadra poliesportiva.</p>
 
 Fluxo principal:
 1. O professor abre a aba do formulário de agendamento.
@@ -108,8 +108,8 @@ Fluxo Alternativo:
 #
 
 Ator: Gremista
-Objetivo: Preencher formulário de agendamento.
-Descrição: O gremista preenche um formulário para agendar a quadra poliesportiva.
+</p>Objetivo: Preencher formulário de agendamento.
+</p>Descrição: O gremista preenche um formulário para agendar a quadra poliesportiva.
 
 Fluxo principal:
 1. O gremista a aba do formulário de agendamento.
