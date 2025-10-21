@@ -1,6 +1,6 @@
-# Ator: Usuário (qualquer)
-Objetivo: Fazer cadastro
-Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema.
+<!-- Ator: Usuário (qualquer) -->
+<!-- Objetivo: Fazer cadastro -->
+<!-- Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema. -->
 
 Fluxo principal: 
 1. O usuário abre a tela para cadastro e escolhe uma opção (aluno, professsor, coordenador, gremista, membro do CABEC, representade de cada esporte ou administrador).
@@ -18,10 +18,11 @@ Fluxos Alternativos:
 - Matrícula incorreta: sistema exibe mensagem de erro e pde para digitar uma matrícula válida ou que ela não corresponde ao nome digitado.
 - E-Mail incorreto: sistema exibe mensagem de erro e pede para digitar um E-Mail inválido.
 
+#
 
-# Ator: Usuário (qualquer)
-Objetivo: Realizar login no sistema
-Descrição: O usuário insere seu login e senha para acessar o sistema.
+<!-- Ator: Usuário (qualquer) -->
+<!-- Objetivo: Realizar login no sistema -->
+<!-- Descrição: O usuário insere seu login e senha para acessar o sistema. -->
 
 Fluxo principal:
 1. O usuário abre a aba de login e escolhe uma opção (aluno, professsor, coordenador, gremista, membro do CABEC, representade de cada esporte ou administrador).
@@ -34,19 +35,25 @@ Fluxo Alternativo:
 - E-Mail ou nome de usuário incorreto: sistema exibe mensagem de erro.
 - Senha incorreta: sistema exibe mensagem de erro.
 
+#
 
-# Ator: Usuário (qualquer)
-Objetivo: Visualizar horários disponíveis da quadra
-Descrição: O usuário visualiza os horários disponíveis e não disponíveis.
+<!-- Ator: Usuário (qualquer) -->
+<!-- Objetivo: Visualizar horários disponíveis da quadra -->
+<!-- Descrição: O usuário visualiza os horários disponíveis e não disponíveis. -->
 
 Fluxo principal:
 1. O usuário abre a aba de horários.
 2. O usuário visualiza os horários disponíveis e não disponíveis.
 
+Fluxo Alternativo:
+- Visualizar horários: apenas usuários logados no sistema podem ver os horários.
 
-# Ator: Representante de esporte
-Objetivo: Preencher formulário de agendamento.
-Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
+#
+
+
+<!-- Ator: Representante de esporte -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O representante de esporte abre a aba do formulário de agendamento.
@@ -61,10 +68,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Representante de esporte
-Objetivo: Preencher formulário de agendamento.
-Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
+<!-- Ator: Representante de esporte -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O representante de esporte abre a aba do formulário de agendamento.
@@ -79,10 +87,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Professor
-Objetivo: Preencher formulário de agendamento.
-Descrição: O professor preenche um formulário para agendar a quadra poliesportiva.
+<!-- Ator: Professor -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O professor preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O professor abre a aba do formulário de agendamento.
@@ -97,10 +106,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Gremista
-Objetivo: Preencher formulário de agendamento.
-Descrição: O gremista preenche um formulário para agendar a quadra poliesportiva.
+<!-- Ator: Gremista -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O gremista preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O gremista a aba do formulário de agendamento.
@@ -115,10 +125,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Administrador
-Objetivo: Preencher formulário de agendamento.
-Descrição: O administrador preenche um formulário para agendar a quadra poliesportiva.
+<!-- Ator: Administrador -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O administrador preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O administrador abre a aba do formulário de agendamento.
@@ -133,10 +144,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Membro do CABEC
-Objetivo: Preencher formulário de agendamento.
-Descrição: O membro do CABEC preenche um formulário para agendar a quadra poliesportiva.
+<!-- Ator: Membro do CABEC -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O membro do CABEC preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O membro do CABEC abre a aba do formulário de agendamento.
@@ -151,10 +163,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Coordenador
-Objetivo: Preencher formulário de agendamento.
-Descrição: O coordenador preenche um formulário para agendar a quadra poliesportiva.
+<!-- Ator: Coordenador -->
+<!-- Objetivo: Preencher formulário de agendamento. -->
+<!-- Descrição: O coordenador preenche um formulário para agendar a quadra poliesportiva. -->
 
 Fluxo principal:
 1. O coordenador abre a aba do formulário de agendamento.
@@ -169,10 +182,11 @@ Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
 
+#
 
-# Ator: Administrador
-Objetivo: Permitir que o sistema salve o login.
-Descrição: O administrador faz com que o sistema salve o login de forma automática.
+<!-- Ator: Administrador -->
+<!-- Objetivo: Permitir que o sistema salve o login. -->
+<!-- Descrição: O administrador faz com que o sistema salve o login de forma automática. -->
 
 Fluxo principal:
 1. O administrador programa que o sistema irá salvar o login dos usuários automaticamente.
