@@ -1,4 +1,4 @@
-Ator: Usuário (qualquer)
+# Ator: Usuário (qualquer)
 Objetivo: Fazer cadastro
 Descrição: O usuário preenche as informações necessárias para realizar o cadastro no sistema.
 
@@ -19,7 +19,7 @@ Fluxos Alternativos:
 - E-Mail incorreto: sistema exibe mensagem de erro e pede para digitar um E-Mail inválido.
 
 
-Ator: Usuário (qualquer)
+# Ator: Usuário (qualquer)
 Objetivo: Realizar login no sistema
 Descrição: O usuário insere seu login e senha para acessar o sistema.
 
@@ -35,7 +35,7 @@ Fluxo Alternativo:
 - Senha incorreta: sistema exibe mensagem de erro.
 
 
-Ator: Usuário (qualquer)
+# Ator: Usuário (qualquer)
 Objetivo: Visualizar horários disponíveis da quadra
 Descrição: O usuário visualiza os horários disponíveis e não disponíveis.
 
@@ -44,7 +44,7 @@ Fluxo principal:
 2. O usuário visualiza os horários disponíveis e não disponíveis.
 
 
-Ator: Representante de esporte
+# Ator: Representante de esporte
 Objetivo: Preencher formulário de agendamento.
 Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
 
@@ -60,3 +60,122 @@ Fluxo principal:
 Fluxo Alternativo:
 - Nome inválido: sistema irá cancelar o agendamento.
 - E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Representante de esporte
+Objetivo: Preencher formulário de agendamento.
+Descrição: O representante de esporte preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O representante de esporte abre a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Professor
+Objetivo: Preencher formulário de agendamento.
+Descrição: O professor preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O professor abre a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Gremista
+Objetivo: Preencher formulário de agendamento.
+Descrição: O gremista preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O gremista a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Administrador
+Objetivo: Preencher formulário de agendamento.
+Descrição: O administrador preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O administrador abre a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Membro do CABEC
+Objetivo: Preencher formulário de agendamento.
+Descrição: O membro do CABEC preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O membro do CABEC abre a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Coordenador
+Objetivo: Preencher formulário de agendamento.
+Descrição: O coordenador preenche um formulário para agendar a quadra poliesportiva.
+
+Fluxo principal:
+1. O coordenador abre a aba do formulário de agendamento.
+2. Insere nome completo.
+3. Insere E-Mail institucional.
+4. Seleciona o horário disponível.
+5. Digita o porquê de querer fazer o agendamento.
+6. Clica em "Finalizar agendamento".
+7. Sistema irá verificar, aceitar o agendamento e exibirá para os outros usuários verem na aba de vizualição de horários.
+
+Fluxo Alternativo:
+- Nome inválido: sistema irá cancelar o agendamento.
+- E-Mail inválido: sistema irá cancelar o agendamento.
+
+
+# Ator: Administrador
+Objetivo: Permitir que o sistema salve o login.
+Descrição: O administrador faz com que o sistema salve o login de forma automática.
+
+Fluxo principal:
+1. O administrador programa que o sistema irá salvar o login dos usuários automaticamente.
+
+Fluxo Alternativo:
+- Permissão: Isso só irá acontecer se o usuário permitir que seu login seja salvo ao entrar na plataforma.
