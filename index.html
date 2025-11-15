@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuadraCron</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QuadraCron</title>
 
-    <!-- Descrição -->
-    <meta name="description" content="Página sobre o software QuadraCron, contendo casos de uso, critérios de aceitação, histórias de usuário e requisitos.">
+  <!-- Meta descrição para SEO -->
+  <meta name="description" content="Documentação completa do projeto Quadracron, incluindo objetivo, requisitos, histórias de usuários e contato.">
 
-    <!-- CSS do Bootstrap -->
-    <link rel="stylesheet"
+  <!-- Carregamento do Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
+  <!-- Configuração personalizada do Tailwind (cor e fonte) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Novas Cores Solicitadas
+            'title-color': '#00004D',      // Cor para títulos (Georgia)
+            'text-color': '#000000',       // Cor para textos normais (Noto Sans)
+            'nav-bg': '#C42D0F',          // Cor de fundo da navegação
+            'border-green': '#4F8637',     // Cor para bordas de destaque
+            'icon-bg': '#145A68',          // Cor de fundo dos ícones de perfil
+            
+            // Cores base para o layout (ajustadas ou mantidas)
+            'bg-light': '#f9fafb',        // Gray-50
+            'primary-dark': '#1f2937',    // Manter como referência escura, mas usando 'text-color' para textos
+          },
+          fontFamily: {
+            // Tipografia para títulos
+            serif: ['Georgia', 'serif'],
+            // Tipografia para textos normais e navegação
+            sans: ['Noto Sans', 'Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 
-<!-- CSS customizado para o rodapé ficar fixo embaixo -->
+  <!-- Estilos customizados para rolagem suave e layout -->
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
+    /* Rolagem suave ao clicar nos links de navegação */
+    html {
+      scroll-behavior: smooth;
     }
 
+    /* Garantir que o rodapé permaneça na parte inferior e definir a fonte base Noto Sans */
     body {
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
+      /* Aplica Noto Sans como fonte base */
+      font-family: 'Noto Sans', 'Inter', sans-serif;
+      background-color: #f3f4f6; /* Gray-100 */
+      color: #000000; /* Aplica a cor de texto padrão */
     }
 
     main {
@@ -33,82 +65,325 @@ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   </style>
 
 </head>
-<body>
-    <!-- Barra de navegação -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Viviane de Menezes Ramalho Souza</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="casos-de-uso.html">Casos de Uso</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="criterios-de-aceitacao.html">Critérios de Aceitação</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="historias-de-usuario.html">Histórias de Usuário</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="requisitos.html">Requisitos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contato.html">Contato</a>
-          </li>
-        </ul>
+<body>
+  
+  <!-- Barra de navegação Fixa -->
+  <!-- Cor da barra: #C42D0f (bg-nav-bg) -->
+  <nav class="bg-nav-bg shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        
+        <!-- Logo/Título Principal -->
+        <div class="flex items-center">
+          <!-- Fonte Noto Sans e cor #FFFFFF -->
+          <a class="text-2xl font-extrabold font-sans text-white tracking-wide" href="#top">
+            QUADRACRON
+          </a>
+        </div>
+
+        <!-- Links de Navegação -->
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
+          <!-- Fonte Noto Sans e cor #FFFFFF -->
+          <a href="#objetivo" class="text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium font-sans transition duration-150 ease-in-out">Objetivo</a>
+          <a href="#publico-alvo" class="text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium font-sans transition duration-150 ease-in-out">Público Alvo</a>
+          <a href="#requisitos" class="text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium font-sans transition duration-150 ease-in-out">Requisitos</a>
+          <a href="#historias-usuarios" class="text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium font-sans transition duration-150 ease-in-out">Histórias de Usuários</a>
+          <a href="#diagramas" class="text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium font-sans transition duration-150 ease-in-out">Diagramas</a>
+          <a href="#contato" class="text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium font-sans transition duration-150 ease-in-out">Contato</a>
+        </div>
+        
+        <!-- Menu Mobile (Botão) -->
+        <div class="flex items-center sm:hidden">
+          <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menu Mobile (Conteúdo) -->
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#objetivo" class="block text-white hover:bg-white/10 px-3 py-2 rounded-md text-base font-medium font-sans transition duration-150 ease-in-out">Objetivo</a>
+        <a href="#publico-alvo" class="block text-white hover:bg-white/10 px-3 py-2 rounded-md text-base font-medium font-sans transition duration-150 ease-in-out">Público Alvo</a>
+        <a href="#requisitos" class="block text-white hover:bg-white/10 px-3 py-2 rounded-md text-base font-medium font-sans transition duration-150 ease-in-out">Requisitos</a>
+        <a href="#historias-usuarios" class="block text-white hover:bg-white/10 px-3 py-2 rounded-md text-base font-medium font-sans transition duration-150 ease-in-out">Histórias de Usuários</a>
+        <a href="#diagramas" class="block text-white hover:bg-white/10 px-3 py-2 rounded-md text-base font-medium font-sans transition duration-150 ease-in-out">Diagramas</a>
+        <a href="#contato" class="block text-white hover:bg-white/10 px-3 py-2 rounded-md text-base font-medium font-sans transition duration-150 ease-in-out">Contato</a>
       </div>
     </div>
   </nav>
 
-  <!-- Breadcrumb -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">Home</li>
-    </ol>
-  </nav>
+  <!-- Conteúdo Principal (main) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-  <!-- Conteúdo principal  (main)-->
-  <main class="container my-5">
-    <h1 class="text-center mb-4">Bem-vindo(a)!</h1>
-   
-    <h1 class="text-center mb-4">Olá, esse é o QuadraCron! 👋</h1>
-    <p class="text-center lead">
-      Site desenvolvido por alunas do curso técnico em Informática, do IFAL Campus Palmeira dos Índios, com o objetivo de organizar os horários da quadra poliesportiva do Campus
-    </p>
-  </section>
-</main>
+    <!-- Seção de Cabeçalho/Introdução -->
+    <header id="top" class="bg-white p-8 rounded-xl shadow-2xl mb-12 text-center border-t-4 border-border-green">
+      <!-- Título: Georgia, #00004D -->
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-serif text-title-color mb-4">
+        QUADRACRON
+      </h1>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-xl text-text-color max-w-3xl mx-auto font-sans">
+        Bem-vindo(a) ao QuadraCron! Aqui você conseguirá agendar e/ou ver o cronograma da quadra poliesportiva do IFAL - Campus Palmeira dos Índios.
+      </p>
+    </header>
 
+    <!-- Estrutura de Seções de Documentação -->
+
+    <!-- OBJETIVO -->
+    <section id="objetivo" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+      <!-- Título: Georgia, #00004D, Borda: #4F8637 -->
+      <h2 class="text-3xl font-bold font-serif text-title-color border-b-2 border-border-green pb-2 mb-4">
+        🎯 1. Objetivo
+      </h2>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-text-color leading-relaxed font-sans">
+        O nosso objetivo com o QuadraCron é resolver os problemas com o uso da quadra poliesportiva do IFAL - Campus Palmeira dos Índios, criando um software onde será possível agendar horários para o uso do local, em que os docentes ou discentes que desejam utilizá-la possam acessar e ver se há horários disponíveis ou não, e caso haja, poderão agendar, evitando constrangimentos e trazendo mais organização.
+      </p>
+    </section>
+    
+    <!-- PÚBLICO ALVO -->
+    <section id="publico-alvo" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+      <!-- Título: Georgia, #00004D, Borda: #4F8637 -->
+      <h2 class="text-3xl font-bold font-serif text-title-color border-b-2 border-border-green pb-2 mb-4">
+        👥 2. Público Alvo e Funções
+      </h2>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-text-color leading-relaxed mb-6 font-sans">
+        O sistema QuadraCron é destinado a diferentes perfis de usuários, cada um com um conjunto específico de permissões para garantir a organização e o controle da utilização da quadra.
+      </p>
+      
+      <!-- Lista de Funções (Cores ajustadas para as bordas e texto) -->
+      <div class="space-y-4">
+        
+        <!-- Administradores -->
+        <div class="p-4 bg-red-50 rounded-lg border-l-4 border-border-green">
+          <h3 class="font-semibold text-text-color font-serif flex justify-between items-center">
+            Administradores
+            <span class="text-xs font-medium bg-border-green/50 text-white px-2 py-0.5 rounded-full font-sans">Controle Total</span>
+          </h3>
+          <p class="text-sm text-text-color mt-1 font-sans">
+            Funções: Controle total do sistema, automatização do login, fiscalização de cadastros, comprovantes de funções e capacidade de agendar horários na quadra.
+          </p>
+        </div>
+
+        <!-- Agendadores -->
+        <div class="p-4 bg-green-50 rounded-lg border-l-4 border-border-green">
+          <h3 class="font-semibold text-text-color font-serif flex justify-between items-center">
+            Agendadores (Representantes, Professores, Coordenadores, Grêmio e CABEC)
+            <span class="text-xs font-medium bg-border-green/50 text-white px-2 py-0.5 rounded-full font-sans">Agendamento & Visualização</span>
+          </h3>
+          <p class="text-sm text-text-color mt-1 font-sans">
+            Funções: Agendam horários na quadra e podem ver o cronograma completo de agendamentos.
+          </p>
+          <ul class="list-disc list-inside ml-4 text-xs text-text-color mt-2 font-sans">
+            <li>Representantes dos Esportes</li>
+            <li>Professores e Coordenadores</li>
+            <li>Membros do Grêmio</li>
+            <li>CABEC</li>
+          </ul>
+        </div>
+        
+        <!-- Alunos -->
+        <div class="p-4 bg-blue-50 rounded-lg border-l-4 border-border-green">
+          <h3 class="font-semibold text-text-color font-serif flex justify-between items-center">
+            Alunos
+            <span class="text-xs font-medium bg-border-green/50 text-white px-2 py-0.5 rounded-full font-sans">Visualização</span>
+          </h3>
+          <p class="text-sm text-text-color mt-1 font-sans">
+            Funções: Possuem permissão limitada. Apenas conseguem visualizar o cronograma (horários já agendados) da quadra.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REQUISITOS -->
+    <section id="requisitos" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+      <!-- Título: Georgia, #00004D, Borda: #4F8637 -->
+      <h2 class="text-3xl font-bold font-serif text-title-color border-b-2 border-border-green pb-2 mb-4">
+        📋 3. Requisitos
+      </h2>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-text-color leading-relaxed mb-4 font-sans">
+        Lista dos requisitos funcionais (o que o sistema deve fazer) e não-funcionais (qualidade do sistema).
+      </p>
+      <div class="space-y-4">
+        <div class="border border-gray-200 rounded-lg p-4">
+          <h4 class="font-semibold text-text-color font-serif">Funcionais:</h4>
+          <ul class="list-disc list-inside ml-4 text-sm text-text-color font-sans">
+            <li>O sistema deve permitir o cadastro de novos projetos e tarefas.</li>
+            <li>O sistema deve calcular automaticamente a porcentagem de conclusão do projeto.</li>
+            <li>O sistema deve enviar notificações por e-mail sobre prazos vencidos.</li>
+          </ul>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4">
+          <h4 class="font-semibold text-text-color font-serif">Não-Funcionais:</h4>
+          <ul class="list-disc list-inside ml-4 text-sm text-text-color font-sans">
+            <li>O tempo de carregamento das páginas não deve exceder 3 segundos.</li>
+            <li>O sistema deve suportar 500 usuários ativos simultaneamente.</li>
+            <li>Os dados devem ser criptografados usando o protocolo SSL/TLS.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- HISTÓRIAS DE USUÁRIOS -->
+    <section id="historias-usuarios" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+      <!-- Título: Georgia, #00004D, Borda: #4F8637 -->
+      <h2 class="text-3xl font-bold font-serif text-title-color border-b-2 border-border-green pb-2 mb-4">
+        📝 4. Histórias de Usuários
+      </h2>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-text-color leading-relaxed mb-4 font-sans">
+        Exemplos de histórias para guiar o desenvolvimento das funcionalidades do sistema.
+      </p>
+      <div class="space-y-3">
+        <!-- Fundos alterados para refletir a nova borda verde -->
+        <div class="bg-blue-50/50 p-3 rounded-lg border border-border-green">
+          <span class="font-semibold text-text-color font-sans">HU1:</span> Como Gerente de Projeto, eu quero visualizar um painel (dashboard) com o status de todos os projetos, para que eu possa identificar rapidamente os que estão em risco.
+        </div>
+        <div class="bg-blue-50/50 p-3 rounded-lg border border-border-green">
+          <span class="font-semibold text-text-color font-sans">HU2:</span> Como Membro da Equipe, eu quero marcar uma tarefa como concluída com um único clique, para que eu não perca tempo e o progresso seja atualizado imediatamente.
+        </div>
+        <div class="bg-blue-50/50 p-3 rounded-lg border border-border-green">
+          <span class="font-semibold text-text-color font-sans">HU3:</span> Como Stakeholder, eu quero receber um relatório semanal por e-mail, para me manter informado sobre o progresso sem precisar acessar a plataforma.
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGRAMAS -->
+    <section id="diagramas" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+      <!-- Título: Georgia, #00004D, Borda: #4F8637 -->
+      <h2 class="text-3xl font-bold font-serif text-title-color border-b-2 border-border-green pb-2 mb-4">
+        🖼️ 5. Diagramas
+      </h2>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-text-color leading-relaxed mb-4 font-sans">
+        Representações visuais da arquitetura e do fluxo de dados do sistema.
+      </p>
+      <div class="border border-dashed border-gray-300 p-8 text-center bg-bg-light rounded-lg">
+        <!-- Título H3 com Georgia -->
+        <h3 class="text-xl font-medium text-text-color/80 mb-2 font-serif">Placeholder para Diagrama de Classes (UML)</h3>
+        <!-- Texto com Noto Sans -->
+        <p class="text-sm text-text-color/60 font-sans">Aqui seria inserida uma imagem ou representação do diagrama, como o Diagrama de Componentes ou de Sequência.</p>
+        <span class="text-6xl text-gray-400 mt-4 block font-sans">
+          <!-- Ícone de diagrama/estrutura (Ex: Estrutura) -->
+          &#x1F4CA;
+        </span>
+      </div>
+    </section>
+    
+    <!-- CONTATO - Equipe de Desenvolvimento -->
+    <section id="contato" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+      <!-- Título: Georgia, #00004D, Borda: #4F8637 -->
+      <h2 class="text-3xl font-bold font-serif text-title-color border-b-2 border-border-green pb-2 mb-4">
+        👨‍💻 6. Contato da Equipe de Desenvolvimento
+      </h2>
+      <!-- Texto: Noto Sans, #000000 -->
+      <p class="text-text-color leading-relaxed mb-4 font-sans">
+        Contato da equipe responsável pelo desenvolvimento do QuadraCron.
+      </p>
+      <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Maísa Alves de Melo (Líder) -->
+        <div class="bg-bg-light p-6 rounded-xl shadow-xl border-l-4 border-border-green flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300">
+          <!-- Ícone: #145A68 (bg-icon-bg) e texto #FFFFFF -->
+          <div class="w-14 h-14 bg-icon-bg text-white rounded-full flex-shrink-0 flex items-center justify-center text-xl font-extrabold font-sans">MA</div>
+          <div>
+            <!-- Nome: Georgia, #00004D -->
+            <h3 class="text-lg font-bold font-serif text-title-color">Maísa Alves de Melo</h3>
+            <!-- Cargo: Noto Sans, #000000 -->
+            <p class="text-sm font-semibold text-text-color mb-2 font-sans">Líder da Equipe</p>
+            <!-- E-mail: Noto Sans, #000000 -->
+            <a href="mailto:mam12@aluno.ifal.edu.br" class="text-sm text-text-color hover:text-nav-bg hover:underline flex items-center font-sans">
+              <span class="mr-1.5">📧</span> mam12@aluno.ifal.edu.br
+            </a>
+          </div>
+        </div>
+
+        <!-- Beatriz de Araújo Bezerra -->
+        <div class="bg-bg-light p-6 rounded-xl shadow-md border-l-4 border-border-green flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300">
+          <!-- Ícone: #145A68 (bg-icon-bg) e texto #FFFFFF -->
+          <div class="w-14 h-14 bg-icon-bg text-white rounded-full flex-shrink-0 flex items-center justify-center text-xl font-bold font-sans">BB</div>
+          <div>
+            <!-- Nome: Georgia, #00004D -->
+            <h3 class="text-lg font-semibold font-serif text-title-color">Beatriz de Araújo Bezerra</h3>
+            <!-- Cargo: Noto Sans, #000000 -->
+            <p class="text-sm text-text-color mb-2 font-sans">Desenvolvedora</p>
+            <!-- E-mail: Noto Sans, #000000 -->
+            <a href="mailto:bab2@aluno.ifal.edu.br" class="text-sm text-text-color hover:text-nav-bg hover:underline flex items-center font-sans">
+              <span class="mr-1.5">📧</span> bab2@aluno.ifal.edu.br
+            </a>
+          </div>
+        </div>
+
+        <!-- Maria Clara da Silva Soares -->
+        <div class="bg-bg-light p-6 rounded-xl shadow-md border-l-4 border-border-green flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300">
+          <!-- Ícone: #145A68 (bg-icon-bg) e texto #FFFFFF -->
+          <div class="w-14 h-14 bg-icon-bg text-white rounded-full flex-shrink-0 flex items-center justify-center text-xl font-bold font-sans">MS</div>
+          <div>
+            <!-- Nome: Georgia, #00004D -->
+            <h3 class="text-lg font-semibold font-serif text-title-color">Maria Clara da Silva Soares</h3>
+            <!-- Cargo: Noto Sans, #000000 -->
+            <p class="text-sm text-text-color mb-2 font-sans">Desenvolvedora</p>
+            <!-- E-mail: Noto Sans, #000000 -->
+            <a href="mailto:mcss49@aluno.ifal.edu.br" class="text-sm text-text-color hover:text-nav-bg hover:underline flex items-center font-sans">
+              <span class="mr-1.5">📧</span> mcss49@aluno.ifal.edu.br
+            </a>
+          </div>
+        </div>
+        
+        <!-- Laura Maria de Lemos Borges -->
+        <div class="bg-bg-light p-6 rounded-xl shadow-md border-l-4 border-border-green flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300">
+          <!-- Ícone: #145A68 (bg-icon-bg) e texto #FFFFFF -->
+          <div class="w-14 h-14 bg-icon-bg text-white rounded-full flex-shrink-0 flex items-center justify-center text-xl font-bold font-sans">LB</div>
+          <div>
+            <!-- Nome: Georgia, #00004D -->
+            <h3 class="text-lg font-semibold font-serif text-title-color">Laura Maria de Lemos Borges</h3>
+            <!-- Cargo: Noto Sans, #000000 -->
+            <p class="text-sm text-text-color mb-2 font-sans">Desenvolvedora</p>
+            <!-- E-mail: Noto Sans, #000000 -->
+            <a href="mailto:lmlb2@aluno.ifal.edu.br" class="text-sm text-text-color hover:text-nav-bg hover:underline flex items-center font-sans">
+              <span class="mr-1.5">📧</span> lmlb2@aluno.ifal.edu.br
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
   </main>
 
   <!-- Rodapé -->
+  <!-- Cor de fundo alterada para a cor da barra de navegação -->
+  <footer class="bg-nav-bg text-white text-center py-6 mt-auto shadow-inner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm mb-1 font-sans">Precisa de ajuda ou relatar algo? Contate <a href="mailto:equipe@quadracron.ifal.pin.br" class="text-white hover:text-gray-300">equipe@quadracron.ifal.pin.br</a></p>
+      <p class="text-xs text-white/80 mb-0 font-sans">&copy; 2025 Projeto Quadracron. Documentação desenvolvida para fins de estudo.</p>
+    </div>
+  </footer>
 
-<footer class="bg-dark text-white text-center py-4 mt-auto">
-  <div class="container">
-    <p class="mb-1">Contato: viviane.souza@ifal.edu.br|</p>
-    <p class="mb-0">&copy; 2025 Viviane Menezes. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  <!-- Script para o menu mobile -->
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
 
-
-
-  <!-- Scripts do Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGaR9G4Q9ANmF6YFZ94i+6oDkG"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    // Fechar menu mobile ao clicar em um link (para rolagem)
+    document.querySelectorAll('#mobile-menu a').forEach(item => {
+        item.addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden');
+        });
+    });
+  </script>
 
 </body>
 </html>
